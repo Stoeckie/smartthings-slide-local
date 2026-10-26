@@ -1,0 +1,7 @@
+name: "Slide Curtain (local)"
+packageKey: "slide-curtain-local-v2"
+description: "Local LAN control of Slide curtain motors (Innovation in Motion / Smart Innovation Partners) via the Slide Local API"
+vendorSupportInformation: "https://github.com/ualex73/goslide-api"
+permissions:
+  lan: {}
+  discovery: {}

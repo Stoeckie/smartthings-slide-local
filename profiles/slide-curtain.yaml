@@ -1,0 +1,45 @@
+name: slide-curtain
+components:
+  - id: main
+    capabilities:
+      - id: windowShade
+        version: 1
+      - id: windowShadeLevel
+        version: 1
+      - id: refresh
+        version: 1
+    categories:
+      - name: Blind
+preferences:
+  - name: ipAddress
+    title: Slide IP address
+    description: Leave on "auto" (found by scanning). Only fill in an IP if the scan does not find the Slide.
+    required: false
+    preferenceType: string
+    definition:
+      stringType: text
+      default: "auto"
+  - name: deviceCode
+    title: Device code (API v1 only)
+    description: 8-character code printed on the Slide. Leave empty for firmware with API v2 (no password).
+    required: false
+    preferenceType: string
+    definition:
+      stringType: text
+      default: ""
+  - name: pollInterval
+    title: Poll interval (seconds)
+    description: How often the position is read when the curtain is idle
+    required: false
+    preferenceType: integer
+    definition:
+      minimum: 5
+      maximum: 3600
+      default: 60
+  - name: invertPosition
+    title: Invert position
+    description: Enable if 100% shows as closed instead of open
+    required: false
+    preferenceType: boolean
+    definition:
+      default: false
